@@ -15,6 +15,11 @@ header {
 header .logo-name {
   margin-bottom: 48px;
 }
+@media screen and (max-width: 600px) {
+  header .logo-name {
+    margin-bottom: 48px;
+  }
+}
 header .logo-name img {
   width: 100px;
 }
@@ -37,6 +42,19 @@ header .logo-name a {
   color: blue;
 }
 
+@media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  header .logo-name .name {
+    margin-bottom: 0;
+  }
+  header #nav-items {
+    width: 50%;
+  }
+}
 footer {
   background-color: rgb(250, 185, 196);
   padding: 16px;

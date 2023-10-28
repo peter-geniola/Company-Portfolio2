@@ -2,7 +2,12 @@ $primary-color: rgb(244, 205, 244);
 $secondary-color: rgb(250, 185, 196);
 $primary-background: rgb(239, 113, 239);
 
+@mixin background-stuff() {
+    background-color: $secondary-color;
+    padding: 16px;
+    text-align: center;
 
+}
 
 body {
     margin: 0;
@@ -15,11 +20,13 @@ body {
 }
 
 header {
-    background-color: $secondary-color;
-    padding: 16px;
-    text-align: center;
+    @include background-stuff();
 
     .logo-name {
+        @media  screen and (max-width: 600px) {
+            margin-bottom: 48px;
+            
+        }
         margin-bottom:48px;
         
         img {
@@ -38,8 +45,6 @@ header {
             }
 
         }
-
-       
         #nav-items {
             display: flex;
             justify-content: space-around;
@@ -53,10 +58,32 @@ header {
         }
     }
 
+    @media screen and (min-width: 600px) {
+        header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            
+            .logo-name {
+                
+                .name {
+                    margin-bottom: 0;
+                }
+            }
+    
+        
+            #nav-items {
+                width: 50%;
+
+            }
+
+
+        }
+    }
+
+
 footer {
-    background-color: $secondary-color;
-    padding: 16px;
-    text-align: center;
+    @include background-stuff();
 
     .social-media {
         display: flex; 
@@ -78,3 +105,12 @@ footer {
 }
 
 
+@media screen (min-width: 600px) {
+    footer {
+        .social-media {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
