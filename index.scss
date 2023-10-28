@@ -7,6 +7,11 @@ $primary-background: rgb(239, 113, 239);
 body {
     margin: 0;
     background-color: $primary-color;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
@@ -48,6 +53,28 @@ header {
         }
     }
 
+footer {
+    background-color: $secondary-color;
+    padding: 16px;
+    text-align: center;
 
+    .social-media {
+        display: flex; 
+        justify-content: space-around;
+        margin-bottom: 32px;
+
+        a {
+            i{
+                font-size: 24px;
+                color: rgb(35, 34, 34);
+            }
+        }
+
+        .info {
+            color: rgb(35, 34, 34);
+        }
+    }
+
+}
 
 
