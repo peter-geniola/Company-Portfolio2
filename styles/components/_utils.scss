@@ -1,0 +1,6 @@
+@import "../defaults/colors";
+
+@mixin background-stuff() {
+    background-color: $secondary-color;
+    padding: 16px;
+    text-align: center;

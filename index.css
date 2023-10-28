@@ -1,12 +1,3 @@
-body {
-  margin: 0;
-  background-color: rgb(244, 205, 244);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 header {
   background-color: rgb(250, 185, 196);
   padding: 16px;
@@ -55,6 +46,15 @@ header .logo-name a {
     width: 50%;
   }
 }
+body {
+  margin: 0;
+  background-color: rgb(196, 148, 196);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 footer {
   background-color: rgb(250, 185, 196);
   padding: 16px;
